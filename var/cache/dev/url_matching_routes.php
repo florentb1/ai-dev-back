@@ -8,6 +8,10 @@
 return [
     false, // $matchHost
     [ // $staticRoutes
+        '/chat' => [[['_route' => 'app_chat', '_controller' => 'App\\Controller\\ChatController::postChat'], null, ['POST' => 0], null, false, false, null]],
+        '/message' => [[['_route' => 'app_message', '_controller' => 'App\\Controller\\MessageController::postMessage'], null, ['POST' => 0], null, false, false, null]],
+        '/first-prompt' => [[['_route' => 'first_prompt', '_controller' => 'App\\Controller\\PromptController::handleFirstPrompt'], null, null, null, false, false, null]],
+        '/reply-prompt' => [[['_route' => 'reply_prompt', '_controller' => 'App\\Controller\\PromptController::handleReplyPrompt'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
